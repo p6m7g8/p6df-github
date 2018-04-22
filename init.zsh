@@ -1,11 +1,13 @@
 p6df::modules::github::version() { echo "0.0.1" }
 p6df::modules::github::deps()    { 
-	ModuleDeps=()
+	ModuleDeps=(
+		p6m7g8/p6github
+	)
 }
 
-p6df::modules::github::external() { 
+p6df::modules::github::external::brew() { 
 
- # brew install hub
+  brew install hub
 }
 
 p6df::modules::github::init() {
