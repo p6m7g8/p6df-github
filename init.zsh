@@ -14,5 +14,3 @@ p6df::modules::github::init() {
 
     eval "$(hub alias -s)"
 }
-
-p6df::modules::github::init
