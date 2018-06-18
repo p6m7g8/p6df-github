@@ -10,6 +10,11 @@ p6df::modules::github::external::brew() {
   brew install hub
 }
 
+p6df::modules::github::home::symlink() {
+
+  # XXX: de XDG
+}
+
 p6df::modules::github::init() {
 
     eval "$(hub alias -s)"
