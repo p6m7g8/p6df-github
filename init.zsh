@@ -13,6 +13,7 @@ p6df::modules::github::external::brew() {
 p6df::modules::github::home::symlink() {
 
   # XXX: de XDG
+  true;
 }
 
 p6df::modules::github::init() {
