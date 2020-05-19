@@ -7,9 +7,6 @@ p6df::modules::github::deps()    {
 
 p6df::modules::github::external::brew() {
 
-  p6__deprecated "brew install bub"
-  brew install hub
-
   brew install github/gh/gh
 }
 
@@ -24,9 +21,7 @@ p6df::modules::github::langs() {
 p6df::modules::github::home::symlink() { }
 
 p6df::modules::github::init() {
-
-    p6__deprecated "hub alias -s"
-    eval "$(hub alias -s)"
+  true
 }
 
 p6_GLOBAL_github_api_org_repos_clone() {
