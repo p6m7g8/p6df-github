@@ -21,7 +21,14 @@ p6df::modules::github::langs() {
 p6df::modules::github::home::symlink() { }
 
 p6df::modules::github::init() {
-  true
+  
+
+  p6df::modules::github::aliases::init
+}
+
+p6df::modules::github::aliases::init() {
+
+  alias p6df_gs="p6_github_cli_submit"
 }
 
 p6_GLOBAL_github_api_org_repos_clone() {
