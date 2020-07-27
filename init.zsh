@@ -41,7 +41,7 @@ p6df::modules::github::external::brew() {
 p6df::modules::github::langs() {
 
   local org
-  for org in $(cat $P6_DFZ_SRC_P6M7G8_DIR/p6github/conf/orgs); do
+  for org in $(cat $P6_DFZ_SRC_P6M7G8_DIR/p6github/conf/current); do
     p6_GLOBAL_github_api_org_repos_clone "$org"
   done
 }
@@ -94,5 +94,5 @@ p6df::modules::github::aliases::init() {
 p6_GLOBAL_github_api_org_repos_clone() {
   local org="$1"
 
-  p6_github_api_org_repos_clone "https://github.com" "https://api.github.com" "$org" "$P6_DFZ_SRC_DIR" "" 8
+  p6_github_api_org_repos_clone "$org" "$P6_DFZ_SRC_DIR"
 }
