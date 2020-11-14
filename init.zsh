@@ -1,4 +1,3 @@
-
 ######################################################################
 #<
 #
@@ -6,11 +5,11 @@
 #
 #>
 ######################################################################
-p6df::modules::github::deps()    {
-	ModuleDeps=(
-		p6m7g8/p6github
+p6df::modules::github::deps() {
+  ModuleDeps=(
+    p6m7g8/p6github
     p6m7g8/p6df-git
-	)
+  )
 }
 
 ######################################################################
@@ -47,7 +46,9 @@ p6df::modules::github::langs() {
 #
 #>
 ######################################################################
-p6df::modules::github::home::symlink() { }
+p6df::modules::github::home::symlink() {
+
+}
 
 ######################################################################
 #<
@@ -57,7 +58,6 @@ p6df::modules::github::home::symlink() { }
 #>
 ######################################################################
 p6df::modules::github::init() {
-
 
   p6df::modules::github::aliases::init
 }
@@ -71,8 +71,12 @@ p6df::modules::github::init() {
 ######################################################################
 p6df::modules::github::aliases::init() {
 
-    alias p6df_ghs="p6_github_cli_submit"
-    alias p6df_ghpl="p6_github_gh_pr_list"
+  alias p6df_ghs="p6_github_cli_submit"
+  alias p6df_ghpl="p6_github_gh_pr_list"
+  alias p6df_ghpc="p6_github_gh_pr_checkout"
+
+  alias ghl=p6df_ghpl
+  alias ghc=p6df_ghpc
 }
 
 ######################################################################
@@ -81,7 +85,7 @@ p6df::modules::github::aliases::init() {
 # Function: p6_GLOBAL_github_api_org_repos_clone(org)
 #
 #  Args:
-#	org - 
+#	org -
 #
 #>
 ######################################################################
