@@ -21,7 +21,7 @@ p6df::modules::github::deps() {
 ######################################################################
 p6df::modules::github::external::brew() {
 
-  brew install github/gh/gh
+  brew install gh
 }
 
 ######################################################################
