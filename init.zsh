@@ -48,6 +48,7 @@ p6df::modules::github::langs() {
 ######################################################################
 p6df::modules::github::home::symlink() {
 
+  ln -fs $P6_DFZ_SRC_DIR/.config/gh/config.yml conf/config.yml
 }
 
 ######################################################################
@@ -74,9 +75,13 @@ p6df::modules::github::aliases::init() {
   alias p6df_ghs="p6_github_cli_submit"
   alias p6df_ghpl="p6_github_gh_pr_list"
   alias p6df_ghpc="p6_github_gh_pr_checkout"
+  alias p6df_ghpC="p6_github_gh_pr_comment"
+  alias p6df_ghpm="p6_github_gh_pr_merge"
 
   alias ghl=p6df_ghpl
   alias ghc=p6df_ghpc
+  alias ghC=p6df_ghpC
+  alias ghm=p6df_ghmp
 }
 
 ######################################################################
