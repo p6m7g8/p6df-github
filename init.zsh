@@ -72,7 +72,7 @@ p6df::modules::github::init() {
 ######################################################################
 p6df::modules::github::aliases::init() {
 
-  alias p6df_ghs="p6_github_cli_submit"
+  alias p6df_ghs="p6_github_gh_pr_submit"
   alias p6df_ghpl="p6_github_gh_pr_list"
   alias p6df_ghpc="p6_github_gh_pr_checkout"
   alias p6df_ghpC="p6_github_gh_pr_comment"
