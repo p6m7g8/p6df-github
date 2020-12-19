@@ -97,5 +97,5 @@ p6df::modules::github::aliases::init() {
 p6_GLOBAL_github_api_org_repos_clone() {
   local org="$1"
 
-  p6_github_api_org_repos_clone "$org" "$P6_DFZ_SRC_DIR"
+  p6_github_util_org_repos_clone "$org" "/Users/pgollucci/src/github.com/active"
 }
