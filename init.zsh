@@ -33,9 +33,14 @@ p6df::modules::github::external::brew() {
 ######################################################################
 p6df::modules::github::langs() {
 
-  local org
-  for org in $(cat $P6_DFZ_SRC_P6M7G8_DIR/p6github/conf/current); do
-    p6_GLOBAL_github_api_org_repos_clone "$org"
+  local org_repo
+  for org_repo in $(cat $P6_DFZ_SRC_P6M7G8_DIR/p6github/conf/current); do
+    local ou
+    local repo
+    ou=$(echo $org_repo | cut -f 1 -d /)
+    repo=$(echo $org_repo | cut -f 2 -d /)
+
+    p6_github_util_repo_clone_or_pull "$ou" "$P6_DFZ_SRC_DIR" "$repo"
   done
 }
 
@@ -82,20 +87,4 @@ p6df::modules::github::aliases::init() {
   alias ghc=p6df_ghpc
   alias ghC=p6df_ghpC
   alias ghm=p6df_ghmp
-}
-
-######################################################################
-#<
-#
-# Function: p6_GLOBAL_github_api_org_repos_clone(org)
-#
-#  Args:
-#	org -
-#
-#>
-######################################################################
-p6_GLOBAL_github_api_org_repos_clone() {
-  local org="$1"
-
-  p6_github_util_org_repos_clone "$org" "/Users/pgollucci/src/github.com/active"
 }
