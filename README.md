@@ -38,9 +38,11 @@
 
 - [Change Log](CHANGELOG.md)
 
-### Usage
+## Usage
 
-#### init.zsh:
+### p6df-github:
+
+#### p6df-github/init.zsh:
 
 - p6df::modules::github::aliases::init()
 - p6df::modules::github::deps()
