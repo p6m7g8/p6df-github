@@ -109,7 +109,8 @@ p6df::modules::github::langs::clones::forked() {
 ######################################################################
 p6df::modules::github::home::symlink() {
 
-  ln -fs $P6_DFZ_SRC_DIR/.config/gh/config.yml conf/config.yml
+  echo ln -fs $P6_DFZ_SRC_DIR/.config/gh/config.yml conf/config.yml
+#  ln -fs $P6_DFZ_SRC_DIR/.config/gh/config.yml conf/config.yml
 }
 
 ######################################################################
