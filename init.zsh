@@ -33,15 +33,71 @@ p6df::modules::github::external::brew() {
 ######################################################################
 p6df::modules::github::langs() {
 
+  p6df::modules::github::langs::clones
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::github::langs::clones()
+#
+#>
+######################################################################
+p6df::modules::github::langs::clones() {
+
+  p6df::modules::github::langs::clones::focused
+  p6df::modules::github::langs::clones::forked
+  # p6df::modules::github::langs::clones::misc
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::github::langs::clones::focused()
+#
+#>
+######################################################################
+p6df::modules::github::langs::clones::focused() {
+
   local org_repo
-  for org_repo in $(cat $P6_DFZ_SRC_P6M7G8_DIR/p6github/conf/current); do
+  for org_repo in $(cat $P6_DFZ_SRC_P6M7G8_DIR/p6github/conf/focused); do
     local ou
     local repo
     ou=$(echo $org_repo | cut -f 1 -d /)
     repo=$(echo $org_repo | cut -f 2 -d /)
 
-    p6_github_util_repo_clone_or_pull "$ou" "$P6_DFZ_SRC_DIR" "$repo"
+    p6_github_util_repo_clone_or_pull "$ou" "$P6_DFZ_SRC_FOCUSED_DIR" "$repo"
   done
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::github::langs::clones::misc()
+#
+#>
+######################################################################
+p6df::modules::github::langs::clones::misc() {
+
+  local org_repo
+  for org_repo in $(cat $P6_DFZ_SRC_P6M7G8_DIR/p6github/conf/misc); do
+    local ou
+    ou=$(echo $org_repo | cut -f 1 -d /)
+
+    p6_github_util_org_repos_clone "$org" "$P6_DFZ_SRC_MISC_DIR"
+  done
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::github::langs::clones::forked()
+#
+#>
+######################################################################
+p6df::modules::github::langs::clones::forked() {
+
+  p6_github_util_org_repos_clone "$USER" "$P6_DFZ_SRC_FORKED_DIR"
 }
 
 ######################################################################
