@@ -54,6 +54,7 @@
 - p6df::modules::github::langs::clones::focused()
 - p6df::modules::github::langs::clones::forked()
 - p6df::modules::github::langs::clones::misc()
+- p6df::modules::github::vscodes()
 
 
 

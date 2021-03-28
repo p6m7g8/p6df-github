@@ -15,6 +15,20 @@ p6df::modules::github::deps() {
 ######################################################################
 #<
 #
+# Function: p6df::modules::github::vscodes()
+#
+#>
+######################################################################
+p6df::modules::github::vscodes() {
+
+  # vc/github/git
+  code --install-extension eamodio.gitlens
+  code --install-extension GitHub.vscode-codeql
+  code --install-extension GitHub.vscode-pull-request-github
+}
+######################################################################
+#<
+#
 # Function: p6df::modules::github::external::brew()
 #
 #>
@@ -55,6 +69,7 @@ p6df::modules::github::langs::clones() {
 #
 # Function: p6df::modules::github::langs::clones::focused()
 #
+#  Environment:	 P6_DFZ_SRC_FOCUSED_DIR P6_DFZ_SRC_P6M7G8_DIR
 #>
 ######################################################################
 p6df::modules::github::langs::clones::focused() {
@@ -75,6 +90,7 @@ p6df::modules::github::langs::clones::focused() {
 #
 # Function: p6df::modules::github::langs::clones::misc()
 #
+#  Environment:	 P6_DFZ_SRC_MISC_DIR P6_DFZ_SRC_P6M7G8_DIR
 #>
 ######################################################################
 p6df::modules::github::langs::clones::misc() {
@@ -93,6 +109,7 @@ p6df::modules::github::langs::clones::misc() {
 #
 # Function: p6df::modules::github::langs::clones::forked()
 #
+#  Environment:	 USER
 #>
 ######################################################################
 p6df::modules::github::langs::clones::forked() {
@@ -105,12 +122,13 @@ p6df::modules::github::langs::clones::forked() {
 #
 # Function: p6df::modules::github::home::symlink()
 #
+#  Environment:	 P6_DFZ_SRC_DIR
 #>
 ######################################################################
 p6df::modules::github::home::symlink() {
 
   echo ln -fs $P6_DFZ_SRC_DIR/.config/gh/config.yml conf/config.yml
-#  ln -fs $P6_DFZ_SRC_DIR/.config/gh/config.yml conf/config.yml
+  #  ln -fs $P6_DFZ_SRC_DIR/.config/gh/config.yml conf/config.yml
 }
 
 ######################################################################
