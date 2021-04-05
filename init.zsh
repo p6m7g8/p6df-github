@@ -26,6 +26,20 @@ p6df::modules::github::vscodes() {
   code --install-extension GitHub.vscode-codeql
   code --install-extension GitHub.vscode-pull-request-github
 }
+
+######################################################################
+#<
+#
+# Function: p6df::modules::github::external::yum()
+#
+#>
+######################################################################
+p6df::modules::github::external::yum() {
+
+  wget https://github.com/cli/cli/releases/download/v1.8.0/gh_1.8.0_linux_amd64.tar.gz -O - | tar xz
+  sudo mv gh_1.8.0_linux_amd64/bin/gh /usr/bin/gh
+}
+
 ######################################################################
 #<
 #

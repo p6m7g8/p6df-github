@@ -47,6 +47,7 @@
 - p6df::modules::github::aliases::init()
 - p6df::modules::github::deps()
 - p6df::modules::github::external::brew()
+- p6df::modules::github::external::yum()
 - p6df::modules::github::home::symlink()
 - p6df::modules::github::init()
 - p6df::modules::github::langs()
