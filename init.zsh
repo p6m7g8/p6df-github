@@ -50,6 +50,7 @@ p6df::modules::github::external::yum() {
 p6df::modules::github::external::brew() {
 
   brew install gh
+  brew install act
 }
 
 ######################################################################
